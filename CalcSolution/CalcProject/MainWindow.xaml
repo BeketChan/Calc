@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalcProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Калькулятор" Height="480" Width="640" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+    <Window.Icon>
+        <BitmapImage UriSource="file:///C:/GB/C%23. My projects/CalculatorRep/CalcSolution/calculator.png"/>
+    </Window.Icon>
     <Grid>
-        
+        <GroupBox Header="Табло" HorizontalAlignment="Left" Height="66" Margin="10,10,0,0" VerticalAlignment="Top" Width="614">
+            <Label Content="0" HorizontalAlignment="Left" Margin="4,-6,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="Open Sans"/>
+        </GroupBox>
     </Grid>
 </Window>
