@@ -35,6 +35,26 @@ namespace CalcProject
       lblTablo.Content = Calc.tablo.ToString();
     }
 
+    #region Нажатие кнопок с клавиатуры
+    private void Window_KeyDown(object sender, KeyEventArgs e)
+    {
+      if (e.Key == Key.D0 || e.Key == Key.NumPad0) RefreshTablo(Key.D0);
+      if (e.Key == Key.D1 || e.Key == Key.NumPad1) RefreshTablo(Key.D1);
+      if (e.Key == Key.D2 || e.Key == Key.NumPad2) RefreshTablo(Key.D2);
+      if (e.Key == Key.D3 || e.Key == Key.NumPad3) RefreshTablo(Key.D3);
+      if (e.Key == Key.D4 || e.Key == Key.NumPad4) RefreshTablo(Key.D4);
+      if (e.Key == Key.D5 || e.Key == Key.NumPad5) RefreshTablo(Key.D5);
+      if (e.Key == Key.D6 || e.Key == Key.NumPad6) RefreshTablo(Key.D6);
+      if (e.Key == Key.D7 || e.Key == Key.NumPad7) RefreshTablo(Key.D7);
+      if (e.Key == Key.D8 || e.Key == Key.NumPad8) RefreshTablo(Key.D8);
+      if (e.Key == Key.D9 || e.Key == Key.NumPad9) RefreshTablo(Key.D9);
+      if (e.Key == Key.Decimal) RefreshTablo(Key.Decimal);
+
+      if (e.Key == Key.Delete) RefreshTablo(Key.Delete);
+    } 
+    #endregion
+
+    #region Нажатие цифровых кнопок мышкой
     private void btn1_Click(object sender, RoutedEventArgs e)
     {
       RefreshTablo(Key.D1);
@@ -88,6 +108,19 @@ namespace CalcProject
     private void btnPoint_Click(object sender, RoutedEventArgs e)
     {
       RefreshTablo(Key.Decimal);
+    }
+
+    #endregion
+    
+
+    private void btnClear_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.Delete);
+    }
+
+    private void btnBackspace_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.Back);
     }
   }
 }

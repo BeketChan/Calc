@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalcProject"
         mc:Ignorable="d"
-        Title="Калькулятор" Height="480" Width="640" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
+        Title="Калькулятор" Height="480" Width="640" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" KeyDown="Window_KeyDown">
     <Window.Icon>
         <BitmapImage UriSource="file:///C:/GB/C%23. My projects/CalculatorRep/CalcSolution/calculator.png"/>
     </Window.Icon>
@@ -15,8 +15,8 @@
         </GroupBox>
         <GroupBox Header="Опции табло" Height="50" Margin="10,76,0,0" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
             <Grid Margin="0">
-                <Button Content="Очистить" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
-                <Button Content="Удалить" HorizontalAlignment="Left" Margin="80,1,0,0" VerticalAlignment="Top" Width="75" Height="25"/>
+                <Button x:Name="btnClear" Content="Очистить" HorizontalAlignment="Left" Margin="0,1,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="btnClear_Click"/>
+                <Button x:Name="btnBackspace" Content="Удалить" HorizontalAlignment="Left" Margin="80,1,0,0" VerticalAlignment="Top" Width="75" Height="25" Click="btnBackspace_Click"/>
             </Grid>
         </GroupBox>
         <GroupBox Header="Базовые операции" Height="50" Margin="10,126,0,0" VerticalContentAlignment="Stretch" VerticalAlignment="Top" HorizontalContentAlignment="Stretch">
