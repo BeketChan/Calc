@@ -24,5 +24,70 @@ namespace CalcProject
     {
       InitializeComponent();
     }
+
+    /// <summary>
+    /// Обновляем табло в зависимости от нажатой кнопки
+    /// </summary>
+    /// <param name="key">Кнопка</param>
+    void RefreshTablo(Key key)
+    {
+      Calc.ChangeTablo(key);
+      lblTablo.Content = Calc.tablo.ToString();
+    }
+
+    private void btn1_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D1);
+    }
+
+    private void btn2_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D2);
+    }
+
+    private void btn3_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D3);
+    }
+
+    private void btn4_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D4);
+    }
+
+    private void btn5_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D5);
+    }
+
+    private void btn6_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D6);
+    }
+
+    private void btn7_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D7);
+    }
+
+    private void btn8_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D8);
+    }
+
+    private void btn9_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D9);
+    }
+
+    private void btn0_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.D0);
+    }
+
+    private void btnPoint_Click(object sender, RoutedEventArgs e)
+    {
+      RefreshTablo(Key.Decimal);
+    }
   }
 }
